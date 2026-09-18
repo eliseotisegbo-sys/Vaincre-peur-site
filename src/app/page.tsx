@@ -1,5 +1,6 @@
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import { NeuralCircuit } from "@/components/NeuralCircuit";
 import { SectionObserver } from "@/components/SectionObserver";
 import { CaseStudies } from "@/sections/CaseStudies";
 import { Faq } from "@/sections/Faq";
@@ -13,6 +14,7 @@ import { Solution } from "@/sections/Solution";
 export default function Page() {
   return (
     <>
+      <NeuralCircuit />
       <SectionObserver />
       <Navbar />
       <main id="main">
@@ -29,3 +31,4 @@ export default function Page() {
     </>
   );
 }
+

@@ -933,9 +933,8 @@ h3 {
 }
 
 .fog {
-  background: var(--color-fog);
-  border-top: 1px solid var(--color-mist-light);
-  border-bottom: 1px solid var(--color-mist-light);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .hover-lift {
@@ -2176,4 +2175,437 @@ h3 {
   .video-title {
     font-size: 17px;
   }
+}
+
+/* ==========================================================================
+   NEURAL CIRCUIT INTERACTIVE CANVAS
+   ========================================================================== */
+
+.neural-circuit-canvas-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.neural-circuit-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================================================
+   CONTINUOUS DEPTH GRADIENT SYSTEM (Clair au début -> Foncé jusqu'à la fin)
+   Expérience de profondeur continue sans perte de lisibilité
+   ========================================================================== */
+
+/* 1. Hero : Début clair, lumineux et accueillant */
+.hero {
+  background: linear-gradient(180deg, #ffffff 0%, #fdfbf7 50%, #f6f3eb 100%);
+  position: relative;
+}
+
+/* 2. Problème : Transition douce vers les teintes pierre et sable */
+#probleme {
+  background: linear-gradient(180deg, #f6f3eb 0%, #eee7da 50%, #e2dac8 100%);
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* 3. Méthode : Point de bascule vers les teintes ardoise & carbone profond */
+#methode {
+  background: linear-gradient(180deg, #e2dac8 0%, #303744 34%, #20252f 100%);
+  color: #f1f5f9;
+}
+
+#methode h2 {
+  color: #ffffff;
+}
+
+#methode .intro {
+  color: #cbd5e1;
+}
+
+#methode .turning-point-card {
+  background: #161b24;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+#methode .turning-point-card p {
+  color: #f8fafc;
+}
+
+#methode .turning-author {
+  color: #94a3b8;
+}
+
+#methode .tab-btn {
+  background: #171c26;
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #cbd5e1;
+}
+
+#methode .tab-btn:hover {
+  border-color: var(--color-ember);
+  color: #ffffff;
+}
+
+#methode .tab-btn.active {
+  background: var(--color-ember);
+  border-color: var(--color-ember);
+  color: #ffffff;
+  box-shadow: 0 4px 16px var(--color-ember-glow);
+}
+
+#methode .tech-card {
+  background: #161b24;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#methode .tech-card:hover {
+  border-color: var(--color-ember);
+  box-shadow: 0 10px 26px rgba(230, 81, 0, 0.14);
+}
+
+#methode .tech-card.selected {
+  background: #1a202c;
+  border-color: var(--color-ember);
+}
+
+#methode .tech-title {
+  color: #ffffff;
+}
+
+#methode .tech-summary {
+  color: #cbd5e1;
+}
+
+#methode .tech-action {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+#methode .plan-timeline-card {
+  background: #161b24;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#methode .timeline-title {
+  color: #ffffff;
+}
+
+#methode .timeline-desc {
+  color: #cbd5e1;
+}
+
+#methode .timeline-focus {
+  color: #94a3b8;
+}
+
+#methode .lie-card {
+  background: #161b24;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#methode .lie-card h3 {
+  color: #ffffff;
+}
+
+#methode .lie-fear-text {
+  color: #fca5a5;
+}
+
+#methode .truth-box {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #d1fae5;
+}
+
+/* 4. Projection : Carbone et constraste saisissant */
+#projection {
+  background: linear-gradient(180deg, #20252f 0%, #181d26 100%);
+  color: #f1f5f9;
+}
+
+#projection h2 {
+  color: #ffffff;
+}
+
+#projection .intro {
+  color: #cbd5e1;
+}
+
+#projection .contrast-card.before-card {
+  background: #141821;
+  border-color: rgba(239, 68, 68, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+#projection .before-card .contrast-list li {
+  color: #cbd5e1;
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+#projection .contrast-card.after-card {
+  background: #13211d;
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.08);
+}
+
+#projection .after-card .contrast-list li {
+  color: #f1f5f9;
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+#projection .imagine-quote-box {
+  background: #141821;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+#projection .imagine-quote-box p {
+  color: #ffffff;
+}
+
+#projection .imagine-quote-box span {
+  color: #94a3b8;
+}
+
+/* 5. Preuves & Vidéo : Obsidienne riche & haute lisibilité */
+#preuves {
+  background: linear-gradient(180deg, #181d26 0%, #12161f 100%);
+  color: #f1f5f9;
+}
+
+#preuves h2 {
+  color: #ffffff;
+}
+
+#preuves .intro {
+  color: #cbd5e1;
+}
+
+#preuves .video-card {
+  background: #141822;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+#preuves .video-card:hover {
+  border-color: var(--color-ember);
+  box-shadow: 0 14px 40px rgba(230, 81, 0, 0.18);
+}
+
+#preuves .video-title {
+  color: #ffffff;
+}
+
+#preuves .video-desc {
+  color: #cbd5e1;
+}
+
+#preuves .video-format-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #cbd5e1;
+}
+
+#preuves .case-card {
+  background: #141822;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+#preuves .case-header {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+#preuves .case-name {
+  color: #ffffff;
+}
+
+#preuves .case-role {
+  color: #94a3b8;
+}
+
+#preuves .case-step p {
+  color: #cbd5e1;
+}
+
+#preuves .result-text {
+  color: #4ade80 !important;
+}
+
+#preuves .testimonial-card {
+  background: #141822;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+#preuves .quote {
+  color: #e2e8f0;
+}
+
+#preuves .testimonial-author {
+  color: #ffffff;
+}
+
+#preuves .testimonial-author span {
+  color: #94a3b8;
+}
+
+/* 6. Contenu du pack : Carbone sombre */
+#contenu {
+  background: linear-gradient(180deg, #12161f 0%, #0d1017 100%);
+  color: #f1f5f9;
+}
+
+#contenu h2 {
+  color: #ffffff;
+}
+
+#contenu .intro {
+  color: #cbd5e1;
+}
+
+#contenu .file-box {
+  background: #121620;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+#contenu .file-box:hover {
+  border-color: var(--color-ember);
+  box-shadow: 0 10px 30px rgba(230, 81, 0, 0.15);
+}
+
+#contenu .file-box h3 {
+  color: #ffffff;
+}
+
+#contenu .file-box p {
+  color: #cbd5e1;
+}
+
+#contenu .file-format {
+  color: #94a3b8;
+}
+
+#contenu .file-features li {
+  color: #e2e8f0;
+  border-color: rgba(255, 255, 255, 0.07);
+}
+
+#contenu .delivery-bar {
+  background: #121620;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+#contenu .delivery-text strong {
+  color: #ffffff;
+}
+
+#contenu .delivery-text p {
+  color: #94a3b8;
+}
+
+/* 7. FAQ : Carbone nocturne */
+#faq {
+  background: linear-gradient(180deg, #0d1017 0%, #07090e 100%);
+  color: #f1f5f9;
+}
+
+#faq h2 {
+  color: #ffffff;
+}
+
+#faq .intro {
+  color: #cbd5e1;
+}
+
+#faq .faq-item {
+  background: #11141c;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#faq .faq-question {
+  color: #ffffff;
+}
+
+#faq .faq-answer p {
+  color: #cbd5e1;
+}
+
+#faq .faq-answer {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* 8. Offre finale : Dégradé abyssal & boutons en lévitation */
+#offre {
+  background: linear-gradient(180deg, #07090e 0%, #000710 100%);
+  color: #f1f5f9;
+}
+
+#offre h2 {
+  color: #ffffff;
+}
+
+#offre .intro {
+  color: #cbd5e1;
+}
+
+#offre .offer-card {
+  background: #090c12;
+  border-color: rgba(230, 81, 0, 0.45);
+  box-shadow: 0 16px 48px rgba(230, 81, 0, 0.16);
+}
+
+#offre .offer-headline h3 {
+  color: #ffffff;
+}
+
+#offre .offer-headline p {
+  color: #cbd5e1;
+}
+
+#offre .offer-list li {
+  color: #e2e8f0;
+}
+
+#offre .pricing-box {
+  background: #131722;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+#offre .price-val {
+  color: #ffffff;
+}
+
+#offre .old-val {
+  color: #94a3b8;
+}
+
+#offre .instant-notice {
+  color: #94a3b8;
+}
+
+#offre .security-badges {
+  color: #94a3b8;
+}
+
+/* 9. Footer : Abysse absolu avec séparateur discret */
+.foot {
+  background: #000710;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
