@@ -27,19 +27,15 @@ export function FinalCta() {
 
               <div className="offer-checklist">
                 <div className="check-line">
-                  <span className="chk">•</span>
                   <span><strong>Livre complet :</strong> Vaincre la Peur en un clin d'œil (35 pages).</span>
                 </div>
                 <div className="check-line">
-                  <span className="chk">•</span>
                   <span><strong>Cahier pratique :</strong> 12 défis réels à relever (13 pages).</span>
                 </div>
                 <div className="check-line">
-                  <span className="chk">•</span>
                   <span><strong>Fiche rituel :</strong> Les 12 mantras du courage au quotidien.</span>
                 </div>
                 <div className="check-line">
-                  <span className="chk">•</span>
                   <span><strong>Accès immédiat :</strong> Téléchargement direct sur votre appareil.</span>
                 </div>
               </div>
@@ -55,7 +51,7 @@ export function FinalCta() {
                   suffit et je vous renvoie vos 3 000 FCFA.
                   Je ne vous demanderai pas pourquoi. Et vous gardez les fichiers.
                 </p>
-                <p className="guarantee-sig">— Sefo</p>
+                <p className="guarantee-sig">Sefo</p>
                 <a
                   className="btn btn-whatsapp btn-sm"
                   href={product.whatsappRefundUrl}
@@ -79,7 +75,7 @@ export function FinalCta() {
                 </a>
 
                 <p className="instant-notice">
-                  🔒 {cta.finalTrust}
+                  {cta.finalTrust}
                 </p>
 
                 <div className="final-payment-logos" aria-label="Moyens de paiement acceptés">
@@ -97,9 +93,7 @@ export function FinalCta() {
 
                 <div className="security-badges">
                   <span>Accès direct</span>
-                  <span>•</span>
                   <span>Format PDF</span>
-                  <span>•</span>
                   <span>Tout appareil</span>
                 </div>
 

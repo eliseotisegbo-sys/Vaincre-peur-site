@@ -37,7 +37,7 @@ export function Solution() {
             className={`tab-btn ${activeTab === "techniques" ? "active" : ""}`}
             onClick={() => setActiveTab("techniques")}
           >
-            11 techniques pratiques
+            4 techniques pratiques
           </button>
           <button
             className={`tab-btn ${activeTab === "plan" ? "active" : ""}`}
@@ -59,31 +59,18 @@ export function Solution() {
               {techniques.map((tech, idx) => (
                 <div
                   key={tech.num}
-                  className={`tech-card ${selectedTech === idx ? "selected" : ""} ${tech.isLocked ? "tech-locked" : ""}`}
-                  onClick={() => !tech.isLocked && setSelectedTech(idx)}
+                  className={`tech-card ${selectedTech === idx ? "selected" : ""}`}
+                  onClick={() => setSelectedTech(idx)}
                 >
                   <div className="tech-card-head">
                     <span className="tech-num">{tech.num}</span>
                     <span className="tech-category">{tech.category}</span>
-                    {tech.isLocked && (
-                      <span className="tech-lock-badge" aria-label="Contenu réservé aux lecteurs">
-                        🔒 Dans le guide
-                      </span>
-                    )}
                   </div>
                   <h4 className="tech-title">{tech.name}</h4>
-                  {!tech.isLocked ? (
-                    <>
-                      <p className="tech-summary">{tech.summary}</p>
-                      <div className="tech-highlight">
-                        <span className="highlight-tag">Bénéfice :</span> {tech.highlight}
-                      </div>
-                    </>
-                  ) : (
-                    <p className="tech-locked-hint">
-                      Protocole complet détaillé pas à pas dans le guide, avec son exercice d'application.
-                    </p>
-                  )}
+                  <p className="tech-summary">{tech.summary}</p>
+                  <div className="tech-highlight">
+                    <span className="highlight-tag">Bénéfice :</span> {tech.highlight}
+                  </div>
                 </div>
               ))}
             </div>

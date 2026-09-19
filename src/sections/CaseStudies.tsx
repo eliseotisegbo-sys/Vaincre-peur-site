@@ -78,7 +78,7 @@ export function CaseStudies() {
           <p className="testimonials-count">{testimonials.length === 3 ? "12 lecteurs. 12 avis vérifiés (5/5)." : ""}</p>
           {testimonials.map((t, idx) => (
             <div key={idx} className="testimonial-card">
-              <span className="rating-stars" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</span>
+              <span className="rating-stars" aria-label="5 étoiles sur 5">5/5</span>
               <p className="quote">« {t.quote} »</p>
               <div className="testimonial-author">
                 <strong>{t.author}</strong>

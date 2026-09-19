@@ -10,7 +10,7 @@ export function Problem() {
           <p className="intro">
             Ce n'est pas vous, c'est votre corps. Cette boule au ventre n'est pas un manque
             de volonté. C'est une alarme biologique qui se déclenche sans vous demander votre
-            avis — et qui peut s'apprendre à calmer.
+            avis. Elle peut s'apprendre à calmer.
           </p>
         </div>
 

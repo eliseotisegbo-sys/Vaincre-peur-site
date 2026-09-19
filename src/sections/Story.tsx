@@ -30,9 +30,9 @@ export function Story() {
           </p>
 
           <p>
-            C'est à partir de son parcours que ce guide a été conçu : pas une théorie,
+            C'est à partir de son parcours que ce guide a été conçu. Pas une théorie,
             pas un séminaire de motivation, mais un protocole de travail concret
-            — appliqué au quotidien, semaine après semaine.
+            appliqué au quotidien, semaine après semaine.
           </p>
         </div>
 

@@ -45,7 +45,6 @@ export function AnimatedBook() {
             <span className="spine-rib top" />
             <div className="spine-content">
               <span className="spine-author">SEFO</span>
-              <span className="spine-sep">•</span>
               <span className="spine-title">VAINCRE LA PEUR EN UN CLIN D&apos;ŒIL</span>
             </div>
             <span className="spine-rib bottom" />

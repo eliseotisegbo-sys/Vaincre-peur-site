@@ -2267,6 +2267,7 @@ h3 {
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
+  opacity: 0.15;
 }
 
 .neural-circuit-canvas {

@@ -17,13 +17,12 @@ export function Hero() {
 
           <h1>
             Osez parler, décider et lancer vos projets en{" "}
-            <span className="word-tag">7 jours</span>{" "}
-            — même si la peur ne disparaît jamais.
+            <span className="word-tag">7 jours</span>, même si la peur ne disparaît jamais.
           </h1>
 
           <p className="lede">
             Un guide pratique pour comprendre les signaux physiques de l'appréhension,
-            les calmer en quelques minutes et avancer — sans attendre d'être prêt.
+            les calmer en quelques minutes et avancer sans attendre d'être prêt.
           </p>
 
           <div className="hero-pricing">
@@ -41,25 +40,21 @@ export function Hero() {
           </div>
 
           <p className="hero-trust-line">
-            🔒 {cta.heroTrust}
+            {cta.heroTrust}
           </p>
 
           <div className="hero-trust-row">
             <div className="trust-item">
-              <span className="bullet-dot" aria-hidden="true">•</span>
               <span>Guide complet de 35 pages et bonus pratique de 13 pages inclus.</span>
             </div>
             <div className="trust-item">
-              <span className="bullet-dot" aria-hidden="true">•</span>
               <span>Paiement Wave, MTN MoMo, Moov Money ou carte bancaire.</span>
             </div>
             <div className="trust-item">
-              <span className="bullet-dot" aria-hidden="true">•</span>
               <span>Des étapes concrètes applicables dès aujourd'hui.</span>
             </div>
             <div className="trust-item">
-              <span className="bullet-dot" aria-hidden="true">•</span>
-              <span>Garanti 7 jours : remboursé sur simple message WhatsApp, sans justification.</span>
+              <span>Garanti 7 jours. Remboursé sur simple message WhatsApp, sans justification.</span>
             </div>
           </div>
 

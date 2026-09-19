@@ -23,8 +23,8 @@ export function Includes() {
               <h3 className="file-title">{file.title}</h3>
               <p className="file-desc">{file.description}</p>
               <div className="file-features">
-                <span className="feat-check">• Format PDF compatible smartphone, tablette et ordinateur</span>
-                <span className="feat-check">• Fichiers conservés sans limite de durée</span>
+                <span className="feat-check">Format PDF compatible smartphone, tablette et ordinateur</span>
+                <span className="feat-check">Fichiers conservés sans limite de durée</span>
               </div>
             </div>
           ))}
@@ -32,21 +32,18 @@ export function Includes() {
 
         <div className="delivery-bar">
           <div className="delivery-item">
-            <span className="delivery-dot">•</span>
             <div>
               <strong>Téléchargement direct</strong>
               <small>Accès immédiat dès le paiement confirmé</small>
             </div>
           </div>
           <div className="delivery-item">
-            <span className="delivery-dot">•</span>
             <div>
               <strong>Paiement sécurisé</strong>
               <small>{product.paymentsText}</small>
             </div>
           </div>
           <div className="delivery-item">
-            <span className="delivery-dot">•</span>
             <div>
               <strong>Garanti 7 jours</strong>
               <small>Un message WhatsApp suffit pour être remboursé</small>

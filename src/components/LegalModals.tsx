@@ -71,7 +71,7 @@ export function LegalModals() {
 
             {open === "remboursement" && (
               <>
-                <h2>Politique de remboursement — Garantie 7 jours</h2>
+                <h2>Politique de remboursement - Garantie 7 jours</h2>
                 <p>
                   Si, après avoir lu le guide et réalisé les exercices proposés pendant 7 jours,
                   vous estimez que ce contenu ne vous a pas été utile, vous pouvez demander
