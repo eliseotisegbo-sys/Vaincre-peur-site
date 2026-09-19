@@ -2410,7 +2410,122 @@ h3 {
   color: #d1fae5;
 }
 
-/* 4. Projection : Carbone et constraste saisissant */
+#methode .timeline-item {
+  background: #161b24;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#methode .timeline-header h4 {
+  color: #ffffff;
+}
+
+#methode .timeline-content p {
+  color: #cbd5e1;
+}
+
+#methode .tech-highlight {
+  background: rgba(255, 255, 255, 0.06);
+  color: #e2e8f0;
+  border-left-color: var(--color-ember);
+}
+
+#methode .tech-num {
+  color: #94a3b8;
+}
+
+#methode .method-cta-row {
+  background: #161b24;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+#methode .method-cta-row h3 {
+  color: #ffffff;
+}
+
+#methode .method-cta-row p {
+  color: #cbd5e1;
+}
+
+#methode .lie-header {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#methode .lie-cross {
+  color: #fca5a5;
+}
+
+#methode .truth-check {
+  color: #6ee7b7;
+}
+
+/* Contenu sombre : delivery overrides */
+#contenu .delivery-item strong {
+  color: #ffffff;
+}
+
+#contenu .delivery-item small {
+  color: #94a3b8;
+}
+
+#contenu .delivery-dot {
+  color: var(--color-ember);
+}
+
+#contenu .file-desc {
+  color: #cbd5e1;
+}
+
+#contenu .file-meta {
+  color: #94a3b8;
+}
+
+/* FAQ sombre : footer note */
+#faq .faq-footer-note {
+  color: #94a3b8;
+}
+
+#faq .faq-footer-note a {
+  color: var(--color-ember);
+}
+
+#faq .faq-answer-panel {
+  color: #cbd5e1;
+}
+
+/* Offre sombre : final-offer-card overrides */
+#offre .final-offer-card {
+  background: #090c12;
+  border-color: rgba(230, 81, 0, 0.4);
+  box-shadow: 0 16px 48px rgba(230, 81, 0, 0.12);
+}
+
+#offre .offer-badge-ribbon {
+  background: var(--color-ember);
+  color: #ffffff;
+}
+
+#offre .offer-desc {
+  color: #cbd5e1;
+}
+
+#offre .check-line {
+  color: #e2e8f0;
+}
+
+#offre .pricing-box {
+  background: #131722;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+#offre .pricing-headline {
+  color: #94a3b8;
+}
+
+#offre .price-val {
+  color: #ffffff;
+}
+
+/* 4. Projection : Carbone et contraste saisissant */
 #projection {
   background: linear-gradient(180deg, #20252f 0%, #181d26 100%);
   color: #f1f5f9;
