@@ -3016,12 +3016,15 @@ h3 {
 }
 
 .story-author-photo .author-img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--color-ember);
-  box-shadow: 0 4px 12px rgba(230, 81, 0, 0.2);
+  object-position: center 30%;
+  border: 4px solid var(--color-ember);
+  box-shadow: 0 6px 16px rgba(230, 81, 0, 0.25);
+  filter: contrast(1.1) brightness(1.05);
+  transform: scale(1.15);
 }
 
 .story-author-meta {
@@ -3051,16 +3054,18 @@ h3 {
   }
   
   .story-author-photo .author-img {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
+    transform: scale(1.2);
   }
   
   .author-name {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+    margin-top: 8px;
   }
   
   .author-bio {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -3376,15 +3381,38 @@ h3 {
   text-decoration: line-through;
 }
 .sticky-btn {
-  min-height: 44px;
-  font-size: 0.875rem;
-  padding: 10px 18px;
+  min-height: 48px;
+  font-size: 0.8rem;
+  padding: 10px 14px;
   white-space: nowrap;
+  line-height: 1.2;
 }
 
 /* Décale le bouton flottant au-dessus de la barre mobile */
 @media (max-width: 767px) {
   .floating-whatsapp { bottom: 72px; }
+  
+  .mobile-sticky-cta {
+    padding: 10px 12px;
+  }
+  
+  .sticky-price-block {
+    gap: 4px;
+  }
+  
+  .sticky-price {
+    font-size: 1.25rem;
+  }
+  
+  .sticky-old-price {
+    font-size: 0.75rem;
+  }
+  
+  .sticky-btn {
+    font-size: 0.75rem;
+    min-height: 44px;
+    padding: 8px 12px;
+  }
 }
 
 /* ============================================================
@@ -3512,13 +3540,17 @@ h3 {
   }
   
   .hero h1 {
-    font-size: clamp(32px, 8vw, 42px);
-    line-height: 1.15;
+    font-size: clamp(28px, 7vw, 42px);
+    line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: manual;
   }
   
   .hero .lede {
-    font-size: 1rem;
-    line-height: 1.55;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    word-wrap: break-word;
   }
   
   .hero-pricing {
@@ -3533,15 +3565,18 @@ h3 {
   
   .current-price {
     font-size: 2.5rem;
+    white-space: nowrap;
   }
   
   .compare-price {
     font-size: 1.125rem;
+    white-space: nowrap;
   }
   
   .discount-badge {
     font-size: 0.875rem;
     padding: 4px 10px;
+    white-space: nowrap;
   }
   
   .actions {
@@ -3551,12 +3586,17 @@ h3 {
   
   .btn-hero-cta {
     width: 100%;
-    min-height: 54px;
-    font-size: 1rem;
+    min-height: 56px;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    white-space: normal;
+    padding: 12px 16px;
   }
   
   .hero-trust-line {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    word-wrap: break-word;
   }
   
   .hero-trust-row {
@@ -3566,7 +3606,9 @@ h3 {
   }
   
   .trust-item {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    word-wrap: break-word;
   }
   
   .hero-payment-logos {
@@ -3582,14 +3624,23 @@ h3 {
   
   /* Navbar Mobile */
   .bar {
-    font-size: 0.75rem;
-    padding: 8px 12px;
-    line-height: 1.4;
+    font-size: 0.7rem;
+    padding: 8px 10px;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+  
+  .bar span {
+    display: block;
+    text-align: center;
   }
   
   .bar-tag {
     font-size: 0.65rem;
     padding: 2px 6px;
+    white-space: nowrap;
+    display: inline-block;
+    margin-bottom: 4px;
   }
   
   .nav-row {
@@ -3635,8 +3686,9 @@ h3 {
   
   .nav-cta .btn {
     min-height: 42px;
-    font-size: 0.875rem;
-    padding: 8px 14px;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    white-space: nowrap;
   }
   
   /* Problem Section Mobile */
@@ -4031,14 +4083,19 @@ h3 {
   /* Boutons généraux mobile */
   .btn {
     min-height: 48px;
-    font-size: 0.95rem;
-    padding: 12px 20px;
+    font-size: 0.9rem;
+    padding: 12px 18px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: center;
   }
   
   .btn-sm {
     min-height: 42px;
-    font-size: 0.85rem;
-    padding: 10px 16px;
+    font-size: 0.8rem;
+    padding: 10px 14px;
+    line-height: 1.3;
   }
   
   /* Wraps et conteneurs */
@@ -4064,10 +4121,23 @@ h3 {
     min-height: 44px;
   }
   
-  /* Amélioration lisibilité */
+  /* Amélioration lisibilité et prévention coupures */
   body {
     font-size: 16px;
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  p, li, span, div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: manual;
   }
   
   p {
@@ -4085,6 +4155,14 @@ h3 {
   textarea,
   select {
     font-size: 16px !important;
+  }
+  
+  /* Prévenir débordement des textes longs */
+  .kicker,
+  .intro,
+  .lede {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 
@@ -4123,19 +4201,27 @@ h3 {
   }
   
   .hero h1 {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 1.25;
   }
   
   .current-price {
-    font-size: 2rem;
+    font-size: 1.875rem;
   }
   
   .btn-hero-cta {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    min-height: 52px;
+    padding: 12px 12px;
   }
   
   .bar {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    padding: 6px 8px;
+  }
+  
+  .bar-tag {
+    font-size: 0.6rem;
   }
   
   .preview-grid {
@@ -4143,11 +4229,38 @@ h3 {
   }
   
   .story-author-intro {
-    padding: 16px;
+    padding: 16px 12px;
   }
   
   .story-author-photo .author-img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
+    transform: scale(1.15);
+  }
+  
+  .author-name {
+    font-size: 1.125rem;
+  }
+  
+  .author-bio {
+    font-size: 0.8rem;
+  }
+  
+  .story-body p {
+    font-size: 0.875rem;
+  }
+  
+  .nav-cta .btn {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+  
+  .mobile-sticky-cta {
+    padding: 8px 10px;
+  }
+  
+  .sticky-btn {
+    font-size: 0.7rem;
+    padding: 8px 10px;
   }
 }

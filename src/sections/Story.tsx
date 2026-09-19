@@ -18,6 +18,7 @@ export function Story() {
               height={200}
               className="author-img"
               priority
+              style={{ objectPosition: 'center 30%' }}
             />
           </div>
           <div className="story-author-meta">
@@ -29,18 +30,26 @@ export function Story() {
         <div className="story-body">
           <p>
             Cotonou, mars 2023. Je suis en réunion dans un cabinet de conseil.
-            Le directeur présente un projet. Il demande des retours. J'ai une objection
-            précise, documentée. J'ouvre la bouche. Rien ne sort. Ma gorge se serre.
-            Mon cœur accélère. Je baisse les yeux. La réunion continue sans moi.
+            Le directeur présente un projet. Il demande des retours.
+          </p>
+          
+          <p>
+            J'ai une objection précise, documentée. J'ouvre la bouche. Rien ne sort.
+            Ma gorge se serre. Mon cœur accélère. Je baisse les yeux.
+            La réunion continue sans moi.
           </p>
 
           <blockquote className="story-quote">
-            « Ce n'est pas que je n'ai pas le courage. C'est que mon corps décide avant moi. »
+            Ce n'est pas que je n'ai pas le courage. C'est que mon corps décide avant moi.
           </blockquote>
 
           <p>
             Six mois plus tard, j'apprends que je n'ai pas obtenu le poste pour lequel
-            je candidatais. La raison notée dans l'évaluation : « manque d'affirmation
+            je candidatais.
+          </p>
+          
+          <p>
+            La raison notée dans l'évaluation : « manque d'affirmation
             dans les échanges collectifs ».
           </p>
 
@@ -49,9 +58,9 @@ export function Story() {
           </p>
 
           <p>
-            C'est à partir de ce parcours que j'ai conçu ce guide. Pas une théorie,
-            pas un séminaire de motivation, mais un protocole de travail concret
-            que j'ai appliqué au quotidien, semaine après semaine.
+            C'est à partir de ce parcours que j'ai conçu ce guide.
+            Pas une théorie, pas un séminaire de motivation, mais un protocole
+            de travail concret que j'ai appliqué au quotidien, semaine après semaine.
           </p>
         </div>
 
