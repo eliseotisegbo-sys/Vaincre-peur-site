@@ -284,7 +284,7 @@ export const faqItems = [
   },
   {
     q: "Je suis vraiment très timide. C'est trop tard pour moi ?",
-    a: "Non. Élise ne parlait pas du tout en réunion. On a commencé par un groupe de trois personnes. Le guide ne vous demande jamais de faire un grand saut : il vous demande de faire le plus petit pas possible, tous les jours.",
+    a: "Non. Elisé ne parlait pas du tout en réunion. On a commencé par un groupe de trois personnes. Le guide ne vous demande jamais de faire un grand saut : il vous demande de faire le plus petit pas possible, tous les jours.",
   },
   {
     q: "Est-ce que je peux le lire sur mon téléphone ?",

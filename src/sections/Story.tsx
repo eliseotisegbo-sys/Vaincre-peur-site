@@ -4,13 +4,13 @@ export function Story() {
       <div className="wrap story-wrap">
         <div className="section-head">
           <p className="kicker">L'ORIGINE</p>
-          <h2>Ce guide est né d'une phrase qu'Élise n'a pas osé dire.</h2>
+          <h2>Ce guide est né d'une phrase qu'Elisé n'a pas osé dire.</h2>
         </div>
 
         <div className="story-body">
           <p>
-            Cotonou, mars 2023. Élise est en réunion dans un cabinet de conseil.
-            Le directeur présente un projet. Il demande des retours. Élise a une objection
+            Cotonou, mars 2023. Elisé est en réunion dans un cabinet de conseil.
+            Le directeur présente un projet. Il demande des retours. Elisé a une objection
             précise, documentée. Elle ouvre la bouche. Rien ne sort. Sa gorge se serre.
             Son cœur accélère. Elle baisse les yeux. La réunion continue sans elle.
           </p>
@@ -20,7 +20,7 @@ export function Story() {
           </blockquote>
 
           <p>
-            Six mois plus tard, Élise apprend qu'elle n'a pas obtenu le poste pour lequel
+            Six mois plus tard, Elisé apprend qu'elle n'a pas obtenu le poste pour lequel
             elle candidatait. La raison notée dans l'évaluation : « manque d'affirmation
             dans les échanges collectifs ».
           </p>
@@ -51,10 +51,6 @@ export function Story() {
           </div>
         </div>
 
-        <div className="story-author-row">
-          <span className="story-sig">— Sefo</span>
-          <p className="story-disclaimer">Prénom modifié à la demande de l'intéressée.</p>
-        </div>
       </div>
     </section>
   );
