@@ -923,7 +923,7 @@ h3 {
    ========================================================================== */
 
 .block {
-  padding: 80px 0;
+  padding: 60px 0;
   position: relative;
 }
 
@@ -1310,7 +1310,7 @@ h3 {
 .lie-text {
   font-size: 18px;
   font-weight: 800;
-  color: #ffffff;
+  color: var(--color-ink);
 }
 
 .truth-check {
@@ -1752,8 +1752,8 @@ h3 {
 
 .delivery-item strong {
   display: block;
-  font-size: 20px;
-  color: red;
+  font-size: 15px;
+  color: var(--color-ink);
 }
 
 .delivery-item small {
@@ -2132,6 +2132,20 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  /* Centrage des palettes de méthodes sur mobile */
+  .tech-card,
+  .card,
+  .file-box,
+  .testimonial-card,
+  .case-card,
+  .lie-card,
+  .timeline-item {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
   .contrast-grid,
   .case-grid,
   .offer-inner-grid,
@@ -2378,6 +2392,14 @@ h3 {
   color: #ffffff;
 }
 
+#methode .lie-text {
+  color: #f1f5f9;
+}
+
+#methode .truth-text {
+  color: #cbd5e1;
+}
+
 #methode .lie-fear-text {
   color: #fca5a5;
 }
@@ -2594,6 +2616,16 @@ h3 {
 #faq .faq-item {
   background: #11141c;
   border-color: rgba(255, 255, 255, 0.1);
+}
+
+#faq .faq-row {
+  background: #11141c;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+#faq .faq-question-btn {
+  color: #f1f5f9;
+  background: transparent;
 }
 
 #faq .faq-question {

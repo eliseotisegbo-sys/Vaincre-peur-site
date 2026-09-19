@@ -10,7 +10,7 @@ export const product = {
   checkoutUrl: "https://motivasefo.mychariow.shop/vaincre-la-peur/checkout",
   storeUrl: "https://motivasefo.mychariow.shop",
   tiktok: "https://tiktok.com/@motivationsefo",
-  whatsapp: "https://wa.me/2290146347988",
+  whatsapp: "https://wa.me/22946347988",
   ratings: { percent: "100%", count: 3, label: "avis vérifiés" },
   files: [
     {
