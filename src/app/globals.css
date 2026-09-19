@@ -106,10 +106,14 @@ button {
   text-align: center;
 }
 
+small {
+  font-size: 13px;
+}
+
 .bar-tag {
   background: var(--color-ember);
   color: #ffffff;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.08em;
   padding: 2px 8px;
@@ -663,18 +667,18 @@ h3 {
 }
 
 .spine-author {
-  font-size: 9px;
+  font-size: 13px;
   color: var(--color-ember);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
 }
 
 .spine-sep {
-  font-size: 8px;
+  font-size: 13px;
   color: var(--color-pewter);
 }
 
 .spine-title {
-  font-size: 9px;
+  font-size: 13px;
   color: #f3f4f6;
 }
 
@@ -789,7 +793,7 @@ h3 {
 .card-pill-category {
   display: inline-block;
   align-self: flex-start;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -802,7 +806,7 @@ h3 {
 
 .rating-tag {
   display: inline-block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.04em;
   color: var(--color-ember);
@@ -821,6 +825,7 @@ h3 {
 
 .book-badge small {
   color: var(--color-pewter);
+  font-size: 13px;
 }
 
 /* ==========================================================================
@@ -851,7 +856,7 @@ h3 {
 }
 
 .timer-label {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -861,7 +866,7 @@ h3 {
 .timer-discount {
   background: var(--color-ember);
   color: #ffffff;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
   padding: 2px 6px;
   border-radius: 4px;
@@ -893,7 +898,7 @@ h3 {
 }
 
 .digit-lbl {
-  font-size: 9px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-steel);
@@ -986,7 +991,7 @@ h3 {
 }
 
 .card-foot-tag {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--color-ember);
   background: var(--color-ember-subtle);
@@ -1169,14 +1174,14 @@ h3 {
 }
 
 .tech-num {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
   color: var(--color-steel);
   font-family: monospace;
 }
 
 .tech-category {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-ember);
@@ -1263,7 +1268,7 @@ h3 {
 }
 
 .tool-pill {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--color-ember);
   background: var(--color-ember-subtle);
@@ -1299,7 +1304,7 @@ h3 {
 }
 
 .lie-cross {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   color: #ef4444;
   text-transform: uppercase;
@@ -1314,7 +1319,7 @@ h3 {
 }
 
 .truth-check {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   color: #10b981;
   text-transform: uppercase;
@@ -1497,7 +1502,7 @@ h3 {
 }
 
 .video-format-pill {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   color: var(--color-graphite);
   background: var(--color-fog);
@@ -1541,7 +1546,7 @@ h3 {
 }
 
 .case-badge {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-ember);
@@ -1577,7 +1582,7 @@ h3 {
 }
 
 .step-tag {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1648,7 +1653,7 @@ h3 {
 }
 
 .verified-pill {
-  font-size: 11px;
+  font-size: 13px;
   color: #10b981;
   font-weight: 700;
 }
@@ -1686,7 +1691,7 @@ h3 {
 }
 
 .file-tag {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-ember);
@@ -1696,7 +1701,7 @@ h3 {
 }
 
 .file-meta {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--color-pewter);
   font-weight: 500;
 }
@@ -1724,7 +1729,7 @@ h3 {
 }
 
 .feat-check {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--color-pewter);
   font-weight: 500;
 }
@@ -1858,7 +1863,7 @@ h3 {
   color: #ffffff;
   padding: 10px 20px;
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
   letter-spacing: 0.12em;
 }
@@ -1956,14 +1961,14 @@ h3 {
 
 .instant-notice {
   margin: 14px 0 12px;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--color-pewter);
 }
 
 .security-badges {
   display: flex;
   gap: 8px;
-  font-size: 11px;
+  font-size: 13px;
   color: var(--color-steel);
   font-weight: 600;
 }
@@ -2023,7 +2028,7 @@ h3 {
 .note {
   margin-top: 24px;
   color: var(--color-steel);
-  font-size: 12px;
+  font-size: 13px;
   max-width: 80ch;
   line-height: 1.6;
 }
