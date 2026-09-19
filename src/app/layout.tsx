@@ -1,21 +1,35 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { product } from "@/lib/content";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://motivasefo.mychariow.shop"),
-  title: "Vaincre la peur en un clin d’œil : Agir en 7 jours | MotivaShop",
+  metadataBase: new URL("https://vaincre-la-peur.vercel.app"),
+  title: "Vaincre la Peur en un clin d'œil | MotivaShop",
   description:
-    "Découvrez un guide simple pour parler en public, lancer un projet et passer à l’action. 3 000 FCFA au lieu de 8 000 FCFA. Téléchargement immédiat.",
-  alternates: { canonical: product.checkoutUrl },
+    "Un guide en 7 jours pour agir, sans attendre d'être prêt. 3 000 FCFA au lieu de 8 000 FCFA. Téléchargement immédiat.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Vaincre la peur en un clin d’œil | MotivaShop",
-    description: "Un guide en 7 jours pour agir, sans attendre d’être prêt. 3 000 FCFA.",
-    url: product.checkoutUrl,
+    title: "Vaincre la Peur en un clin d'œil | MotivaShop",
+    description: "Un guide en 7 jours pour agir, sans attendre d'être prêt. 3 000 FCFA au lieu de 8 000 FCFA.",
+    url: "https://vaincre-la-peur.vercel.app/",
     siteName: "MotivaShop",
-    images: [{ url: product.cover }],
     locale: "fr_FR",
     type: "website",
+    images: [
+      {
+        url: "https://vaincre-la-peur.vercel.app/images/og/vaincre-peur-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Vaincre la Peur en un clin d'œil. Guide pratique en 7 jours",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vaincre la Peur en un clin d'œil | MotivaShop",
+    description: "Un guide en 7 jours pour agir, sans attendre d'être prêt. 3 000 FCFA au lieu de 8 000 FCFA.",
+    images: ["https://vaincre-la-peur.vercel.app/images/og/vaincre-peur-og.jpg"],
   },
 };
 

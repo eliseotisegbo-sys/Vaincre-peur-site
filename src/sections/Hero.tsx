@@ -1,6 +1,6 @@
 import { AnimatedBook } from "@/components/AnimatedBook";
-import { CountdownTimer } from "@/components/CountdownTimer";
-import { cta, product } from "@/lib/content";
+import { cta, paymentLogos, product } from "@/lib/content";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -8,30 +8,23 @@ export function Hero() {
       <div className="wrap hero-grid">
         <div className="hero-content">
           <div className="hero-eyebrow">
-            <span className="live-pill">
-              <span className="pulse-dot" aria-hidden="true"></span>
-              Guide pratique d'action
-            </span>
             <span className="rating-pill">
-              100% d’avis positifs · Lecteurs vérifiés
+              {product.ratings.label}
             </span>
           </div>
 
+          <p className="hero-surtitre">SEFO · VAINCRE LA PEUR EN UN CLIN D'ŒIL</p>
+
           <h1>
-            Vaincre la <span className="word-glow">peur</span>{" "}
-            <span className="word-underline">en un clin d’œil</span> et passer à l’action en{" "}
-            <span className="word-tag">7 jours</span>
+            Osez parler, décider et lancer vos projets en{" "}
+            <span className="word-tag">7 jours</span>{" "}
+            — même si la peur ne disparaît jamais.
           </h1>
 
           <p className="lede">
-            <strong>Vous hésitez souvent avant d’agir ?</strong> Découvrez une démarche claire pour
-            apaiser vos tensions physiques, prendre la parole sans trembler et lancer vos projets
-            sans attendre d'être parfait.
+            Un guide pratique pour comprendre les signaux physiques de l'appréhension,
+            les calmer en quelques minutes et avancer — sans attendre d'être prêt.
           </p>
-
-          <div className="hero-timer-wrap">
-            <CountdownTimer compact />
-          </div>
 
           <div className="hero-pricing">
             <div className="price-tag">
@@ -39,17 +32,17 @@ export function Hero() {
               <span className="compare-price">{product.compareAt}</span>
               <span className="discount-badge">{product.discountPercent}</span>
             </div>
-            <span className="price-note">Téléchargement immédiat après validation. Offre promotionnelle 24h.</span>
           </div>
 
           <div className="actions">
             <a className="btn btn-ember btn-hero-cta" href={product.checkoutUrl}>
-              {cta.primary}
-            </a>
-            <a className="btn btn-ghost" href="#methode">
-              {cta.secondary}
+              {cta.heroPrimary}
             </a>
           </div>
+
+          <p className="hero-trust-line">
+            🔒 {cta.heroTrust}
+          </p>
 
           <div className="hero-trust-row">
             <div className="trust-item">
@@ -58,12 +51,29 @@ export function Hero() {
             </div>
             <div className="trust-item">
               <span className="bullet-dot" aria-hidden="true">•</span>
-              <span>Paiement sécurisé par Wave, Mobile Money ou carte bancaire.</span>
+              <span>Paiement Wave, MTN MoMo, Moov Money ou carte bancaire.</span>
             </div>
             <div className="trust-item">
               <span className="bullet-dot" aria-hidden="true">•</span>
-              <span>Des étapes concrètes applicables dès aujourd’hui.</span>
+              <span>Des étapes concrètes applicables dès aujourd'hui.</span>
             </div>
+            <div className="trust-item">
+              <span className="bullet-dot" aria-hidden="true">•</span>
+              <span>Garanti 7 jours : remboursé sur simple message WhatsApp, sans justification.</span>
+            </div>
+          </div>
+
+          <div className="hero-payment-logos" aria-label="Moyens de paiement acceptés">
+            {paymentLogos.map((logo) => (
+              <Image
+                key={logo.name}
+                src={logo.src}
+                alt={logo.name}
+                width={40}
+                height={24}
+                className="payment-logo-sm"
+              />
+            ))}
           </div>
         </div>
 

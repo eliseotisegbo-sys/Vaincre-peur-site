@@ -9,7 +9,7 @@ export function ProductMedia() {
 
   useEffect(() => {
     let cancelled = false;
-    fetch(product.video.desktop, { method: "HEAD" })
+    fetch(product.video.src, { method: "HEAD" })
       .then((res) => {
         if (!cancelled && res.ok) setHasVideo(true);
       })
@@ -44,10 +44,10 @@ export function ProductMedia() {
           muted
           playsInline
           loop
-          preload="metadata"
+          preload="none"
           aria-label={product.name}
         >
-          <source src={product.video.desktop} type="video/mp4" />
+          <source src={product.video.src} type="video/mp4" />
         </video>
       ) : (
         <img src={product.cover} alt={`Couverture : ${product.name}`} width={640} height={640} />

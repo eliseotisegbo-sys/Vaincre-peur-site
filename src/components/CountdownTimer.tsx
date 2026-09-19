@@ -1,102 +1,99 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { getTimeRemaining, type TimeRemaining } from "@/lib/countdown";
+import { product } from "@/lib/content";
 
-interface TimeLeft {
-  hours: number;
-  minutes: number;
-  seconds: number;
-}
-
-export function CountdownTimer({ compact = false }: { compact?: boolean }) {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ hours: 23, minutes: 59, seconds: 59 });
+export function CountdownTimer() {
+  const [time, setTime] = useState<TimeRemaining>({
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+    isExpired: false,
+    totalSeconds: 0,
+  });
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const STORAGE_KEY = "vaincre_peur_promo_end_v2";
+    setTime(getTimeRemaining());
 
-    const getOrSetEndTime = () => {
-      const now = Date.now();
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) {
-        const parsed = parseInt(saved, 10);
-        if (parsed > now) {
-          return parsed;
-        }
-      }
-      // Set new 24h rolling deadline (24 hours from now)
-      const nextEnd = now + 24 * 60 * 60 * 1000;
-      localStorage.setItem(STORAGE_KEY, nextEnd.toString());
-      return nextEnd;
-    };
+    const timer = setInterval(() => {
+      setTime(getTimeRemaining());
+    }, 1000);
 
-    let endTime = getOrSetEndTime();
-
-    const updateTimer = () => {
-      const now = Date.now();
-      let diff = endTime - now;
-
-      if (diff <= 0) {
-        // Automatically renew for another 24 hours as requested!
-        endTime = now + 24 * 60 * 60 * 1000;
-        localStorage.setItem(STORAGE_KEY, endTime.toString());
-        diff = endTime - now;
-      }
-
-      const totalSec = Math.floor(diff / 1000);
-      const hours = Math.floor((totalSec / 3600) % 24);
-      const minutes = Math.floor((totalSec / 60) % 60);
-      const seconds = totalSec % 60;
-
-      setTimeLeft({ hours, minutes, seconds });
-    };
-
-    updateTimer();
-    const interval = setInterval(updateTimer, 1000);
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, []);
+
+  const format = (n: number) => n.toString().padStart(2, "0");
 
   if (!mounted) {
     return (
-      <div className={`countdown-box ${compact ? "compact" : ""}`} aria-label="Compte à rebours promotionnel 24h">
-        <span className="timer-badge">Offre 24H</span>
-        <div className="timer-digits">
-          <span className="digit">23</span>
-          <span className="sep">:</span>
-          <span className="digit">59</span>
-          <span className="sep">:</span>
-          <span className="digit">59</span>
+      <div className="countdown-box" aria-label="Compte à rebours promotionnel 24h">
+        <div className="timer-header">
+          <span className="timer-label">OFFRE 24H. Fin ce soir à minuit.</span>
+          <span className="timer-discount">-62%</span>
         </div>
+        <div className="timer-digits">
+          <div className="digit-unit">
+            <span className="digit">--</span>
+            <span className="digit-lbl">heures</span>
+          </div>
+          <span className="sep" aria-hidden="true">:</span>
+          <div className="digit-unit">
+            <span className="digit">--</span>
+            <span className="digit-lbl">min</span>
+          </div>
+          <span className="sep" aria-hidden="true">:</span>
+          <div className="digit-unit">
+            <span className="digit">--</span>
+            <span className="digit-lbl">sec</span>
+          </div>
+        </div>
+        <p className="timer-subtext">À minuit, le guide repasse à 8 000 FCFA.</p>
       </div>
     );
   }
 
-  const format = (n: number) => n.toString().padStart(2, "0");
+  if (time.isExpired) {
+    return (
+      <div className="countdown-box expired" role="status" aria-live="polite">
+        <div className="timer-header">
+          <span className="timer-label">L'offre d'hier est terminée.</span>
+        </div>
+        <p className="expired-message">
+          Une nouvelle fenêtre de 24h vient d'ouvrir. Le guide est de nouveau à 3 000 FCFA jusqu'à ce soir minuit.
+        </p>
+        <a className="btn btn-ember btn-sm" href={product.checkoutUrl}>
+          J'en profite maintenant · 3 000 FCFA
+        </a>
+      </div>
+    );
+  }
 
   return (
-    <div className={`countdown-box ${compact ? "compact" : ""}`} role="timer" aria-live="polite">
+    <div className="countdown-box" role="timer" aria-live="polite">
       <div className="timer-header">
-        <span className="pulse-dot" aria-hidden="true"></span>
-        <span className="timer-label">Offre spéciale 24H</span>
+        <span className="timer-label">OFFRE 24H. Fin ce soir à minuit.</span>
         <span className="timer-discount">-62%</span>
       </div>
       <div className="timer-digits">
         <div className="digit-unit">
-          <span className="digit">{format(timeLeft.hours)}</span>
+          <span className="digit">{format(time.hours)}</span>
           <span className="digit-lbl">heures</span>
         </div>
         <span className="sep" aria-hidden="true">:</span>
         <div className="digit-unit">
-          <span className="digit">{format(timeLeft.minutes)}</span>
+          <span className="digit">{format(time.minutes)}</span>
           <span className="digit-lbl">min</span>
         </div>
         <span className="sep" aria-hidden="true">:</span>
         <div className="digit-unit">
-          <span className="digit">{format(timeLeft.seconds)}</span>
+          <span className="digit">{format(time.seconds)}</span>
           <span className="digit-lbl">sec</span>
         </div>
       </div>
+      <p className="timer-subtext">À minuit, le guide repasse à 8 000 FCFA.</p>
     </div>
   );
 }

@@ -11,7 +11,7 @@ export function Navbar() {
       <aside className="bar" aria-label="Annonce promotionnelle">
         <span className="bar-tag">Offre 24H</span>
         <span>
-          Guide disponible à <b>{product.price}</b> au lieu de <span className="bar-old">{product.compareAt}</span> ({product.discountPercent}). Téléchargement immédiat.
+          Le guide à <b>{product.price}</b> au lieu de <span className="bar-old">{product.compareAt}</span> ({product.discountPercent}). Fin ce soir à minuit. Téléchargement immédiat.
         </span>
       </aside>
       <header className="nav">
@@ -32,15 +32,17 @@ export function Navbar() {
             </button>
             <ul id="main-menu" className={`links ${open ? "open" : ""}`}>
               <li><a href="#probleme" onClick={() => setOpen(false)}>Le problème</a></li>
+              <li><a href="#histoire" onClick={() => setOpen(false)}>L'histoire</a></li>
               <li><a href="#methode" onClick={() => setOpen(false)}>La méthode</a></li>
               <li><a href="#preuves" onClick={() => setOpen(false)}>Preuves</a></li>
               <li><a href="#contenu" onClick={() => setOpen(false)}>Contenu</a></li>
+              <li><a href="#apercu" onClick={() => setOpen(false)}>Aperçu</a></li>
               <li><a href="#faq" onClick={() => setOpen(false)}>FAQ</a></li>
             </ul>
           </nav>
           <div className="nav-cta">
             <a className="btn btn-ember" href={product.checkoutUrl}>
-              {cta.primary}
+              {cta.header}
             </a>
           </div>
         </div>

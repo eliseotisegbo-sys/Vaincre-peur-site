@@ -1,5 +1,6 @@
 import { CountdownTimer } from "@/components/CountdownTimer";
-import { cta, product } from "@/lib/content";
+import { cta, paymentLogos, product } from "@/lib/content";
+import Image from "next/image";
 
 export function FinalCta() {
   return (
@@ -15,8 +16,9 @@ export function FinalCta() {
               <p className="kicker">PASSER À L'ACTION</p>
               <h2>Prenez la décision d'agir dès aujourd'hui.</h2>
               <p className="offer-desc">
-                Reporter vos initiatives entretient les doutes. En vous appuyant sur des démarches
-                claires et progressives, vous commencez à avancer dès ce soir avec des repères solides.
+                Reporter vos initiatives entretient les doutes. En vous appuyant sur des
+                démarches claires et progressives, vous commencez à avancer dès ce soir
+                avec des repères solides.
               </p>
 
               <div className="offer-timer-container">
@@ -26,7 +28,7 @@ export function FinalCta() {
               <div className="offer-checklist">
                 <div className="check-line">
                   <span className="chk">•</span>
-                  <span><strong>Livre complet :</strong> Vaincre la Peur en un clin d’œil (35 pages).</span>
+                  <span><strong>Livre complet :</strong> Vaincre la Peur en un clin d'œil (35 pages).</span>
                 </div>
                 <div className="check-line">
                   <span className="chk">•</span>
@@ -38,12 +40,32 @@ export function FinalCta() {
                 </div>
                 <div className="check-line">
                   <span className="chk">•</span>
-                  <span><strong>Accès immédiat :</strong> Téléchargement direct et assistance WhatsApp.</span>
+                  <span><strong>Accès immédiat :</strong> Téléchargement direct sur votre appareil.</span>
                 </div>
               </div>
             </div>
 
             <div className="offer-right">
+              {/* Encadré Garantie */}
+              <div className="guarantee-box">
+                <p className="guarantee-title">Votre satisfaction ou votre argent rendu</p>
+                <p className="guarantee-text">
+                  Lisez le guide. Faites les 7 jours. Relevez les premiers défis.
+                  Si vous estimez que ça ne vous a rien apporté, un message sur WhatsApp
+                  suffit et je vous renvoie vos 3 000 FCFA.
+                  Je ne vous demanderai pas pourquoi. Et vous gardez les fichiers.
+                </p>
+                <p className="guarantee-sig">— Sefo</p>
+                <a
+                  className="btn btn-whatsapp btn-sm"
+                  href={product.whatsappRefundUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Demander le remboursement sur WhatsApp
+                </a>
+              </div>
+
               <div className="pricing-box">
                 <span className="pricing-headline">Tarif promotionnel</span>
                 <div className="big-price-tag">
@@ -53,12 +75,25 @@ export function FinalCta() {
                 <span className="discount-tag">Réduction immédiate de 5 000 FCFA ({product.discountPercent})</span>
 
                 <a className="btn btn-ember btn-large-cta" href={product.checkoutUrl}>
-                  {cta.primary}
+                  {cta.finalPrimary}
                 </a>
 
                 <p className="instant-notice">
-                  Paiement sécurisé par {product.payments}.
+                  🔒 {cta.finalTrust}
                 </p>
+
+                <div className="final-payment-logos" aria-label="Moyens de paiement acceptés">
+                  {paymentLogos.map((logo) => (
+                    <Image
+                      key={logo.name}
+                      src={logo.src}
+                      alt={logo.name}
+                      width={48}
+                      height={28}
+                      className="payment-logo-md"
+                    />
+                  ))}
+                </div>
 
                 <div className="security-badges">
                   <span>Accès direct</span>
@@ -67,6 +102,8 @@ export function FinalCta() {
                   <span>•</span>
                   <span>Tout appareil</span>
                 </div>
+
+                <p className="chariow-note">Distribution assurée par Chariow</p>
               </div>
             </div>
           </div>

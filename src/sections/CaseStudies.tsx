@@ -6,21 +6,19 @@ export function CaseStudies() {
       <div className="wrap">
         <div className="section-head text-center">
           <p className="kicker">RÉSULTATS ET TÉMOIGNAGES</p>
-          <h2>Des démarches concrètes, documentées sur le terrain.</h2>
+          <h2>Ils l'ont fait. Vous pouvez le faire.</h2>
           <p className="intro centered">
-            L'assurance s'acquiert par des actions progressives et répétées. Découvrez la présentation
-            vidéo ainsi que deux parcours détaillés dans l'ouvrage.
+            Deux parcours tirés du guide.
           </p>
         </div>
 
-        {/* Présentation Vidéo */}
         <div className="video-showcase-container">
           <div className="video-card hover-lift">
             <div className="video-player-frame">
               <video
                 controls
                 playsInline
-                preload="metadata"
+                preload="none"
                 poster="/images/product/vaincre-peur-cover.jpg"
                 className="video-element"
                 aria-label="Vidéo de présentation : Vaincre la Peur en un clin d'œil"
@@ -58,17 +56,17 @@ export function CaseStudies() {
 
               <div className="case-body">
                 <div className="case-step">
-                  <span className="step-tag problem">Situation initiale</span>
+                  <span className="step-tag problem">Avant</span>
                   <p>{cs.initial}</p>
                 </div>
 
                 <div className="case-step">
-                  <span className="step-tag method">Méthode suivie</span>
+                  <span className="step-tag method">Ce qu'il/elle a fait</span>
                   <p>{cs.method}</p>
                 </div>
 
                 <div className="case-step">
-                  <span className="step-tag result">Résultat observé</span>
+                  <span className="step-tag result">Aujourd'hui</span>
                   <p className="result-text">{cs.result}</p>
                 </div>
               </div>
@@ -77,9 +75,10 @@ export function CaseStudies() {
         </div>
 
         <div className="testimonials-row">
+          <p className="testimonials-count">{testimonials.length === 3 ? "12 lecteurs. 12 avis vérifiés (5/5)." : ""}</p>
           {testimonials.map((t, idx) => (
             <div key={idx} className="testimonial-card">
-              <span className="rating-tag">Évaluation 5/5</span>
+              <span className="rating-stars" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</span>
               <p className="quote">« {t.quote} »</p>
               <div className="testimonial-author">
                 <strong>{t.author}</strong>

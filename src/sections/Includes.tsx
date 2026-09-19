@@ -6,10 +6,10 @@ export function Includes() {
       <div className="wrap">
         <div className="section-head">
           <p className="kicker">CONTENU DU PACK</p>
-          <h2>Le guide principal et ses compléments pratiques.</h2>
+          <h2>Ce que vous recevez dans les 2 minutes.</h2>
           <p className="intro">
-            Dès validation de votre commande, vous accédez directement aux fichiers sur votre écran
-            et par e-mail. Les documents sont lisibles sur tout appareil.
+            Vous payez, et les fichiers apparaissent directement sur votre écran.
+            Un lien part aussi sur votre e-mail. À vous pour toujours, aucune date d'expiration.
           </p>
         </div>
 
@@ -35,21 +35,21 @@ export function Includes() {
             <span className="delivery-dot">•</span>
             <div>
               <strong>Téléchargement direct</strong>
-              <small>Accès immédiat dès la validation du règlement</small>
+              <small>Accès immédiat dès le paiement confirmé</small>
             </div>
           </div>
           <div className="delivery-item">
             <span className="delivery-dot">•</span>
             <div>
               <strong>Paiement sécurisé</strong>
-              <small>{product.payments}</small>
+              <small>{product.paymentsText}</small>
             </div>
           </div>
           <div className="delivery-item">
             <span className="delivery-dot">•</span>
             <div>
-              <strong>Assistance disponible</strong>
-              <small>Équipe joignable directement par WhatsApp</small>
+              <strong>Garanti 7 jours</strong>
+              <small>Un message WhatsApp suffit pour être remboursé</small>
             </div>
           </div>
         </div>
